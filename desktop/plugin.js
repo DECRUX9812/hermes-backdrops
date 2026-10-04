@@ -30,7 +30,7 @@ const MAX_EDGE = 1920
 const FETCH_MS = 6000
 const REFRESH_MS = 6 * 60 * 60 * 1000
 const DAY_MS = 86_400_000
-const VEIL = { soft: 72, vivid: 38 } // % of the chat surface colour laid over the picture
+const VEIL = { soft: 72, vivid: 38, darker: 88 } // % of the chat surface colour laid over the picture
 
 const $drops = atom([])
 const $origin = atom('loading') // 'live' | 'cached' | 'bundled' | 'loading'
@@ -325,7 +325,7 @@ function Picker({ ctx }) {
           jsx('span', { className: 'text-xs text-(--ui-text-tertiary)', children: 'Picture strength' }),
           jsx('div', {
             className: 'flex rounded-lg bg-(--ui-bg-quinary) p-0.5 text-xs',
-            children: ['soft', 'vivid'].map(level =>
+            children: ['soft', 'vivid', 'darker'].map(level =>
               jsx(
                 'button',
                 {
@@ -426,7 +426,8 @@ export default {
 
     $choice.set(typeof stored === 'string' ? stored : 'plain')
     $own.set(ctx.storage.get('own', null))
-    $veil.set(ctx.storage.get('veil', 'soft') === 'vivid' ? 'vivid' : 'soft')
+    const storedVeil = ctx.storage.get('veil', 'soft')
+    $veil.set(['soft', 'vivid', 'darker'].includes(storedVeil) ? storedVeil : 'soft')
     const cached = normalize(base, ctx.storage.get('gallery', null))
     $drops.set(cached.length > 0 ? cached : normalize(base, BUNDLED))
 
