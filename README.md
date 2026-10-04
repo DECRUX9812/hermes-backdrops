@@ -12,7 +12,15 @@ your theme**. Click the picture icon in the status bar and pick:
 Your colours, fonts and light/dark mode are left alone, because the picture sits
 under whatever theme you already use.
 
-![Backdrops](docs/hero.jpg)
+![Backdrops demo](docs/demo.gif)
+
+▶ [Watch the 30-second film (with sound)](docs/demo.mp4)
+
+| Picker | Daily inspiration | Your own photo |
+| --- | --- | --- |
+| ![Picker](docs/picker-dark.jpg) | ![Daily inspiration](docs/daily.jpg) | ![Your own photo](docs/your-photo.jpg) |
+| **Rainline City** | **Glowcap Forest** | **Light mode** |
+| ![Rainline City](docs/rainline.jpg) | ![Glowcap Forest](docs/glowcap.jpg) | ![Light mode](docs/picker.png) |
 
 ## Install
 
