@@ -8,7 +8,7 @@ your theme**. Click the picture icon in the status bar and pick:
 - **Your own** — upload any photo. It is downscaled and kept on your machine.
 - **Gallery** — any drop from the gallery. New drops get a *New* badge for 30 days.
 
-**Picture strength** switches between *Soft* (text stays very readable) and *Vivid*.
+**Picture strength** switches between *Soft* (text stays very readable), *Darker* (the photo dimmed further, for busy or bright pictures) and *Vivid*.
 Your colours, fonts and light/dark mode are left alone, because the picture sits
 under whatever theme you already use.
 
