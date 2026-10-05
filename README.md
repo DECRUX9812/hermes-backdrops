@@ -1,12 +1,12 @@
-# Backdrops — a picture behind your Hermes chat
+# Backdrops: a picture behind your Hermes chat
 
 A Hermes Desktop plugin that puts a picture behind the chat **without changing
 your theme**. Click the picture icon in the status bar and pick:
 
-- **Plain** — the normal chat.
-- **Daily inspiration** — a different gallery picture every day.
-- **Your own** — upload any photo. It is downscaled and kept on your machine.
-- **Gallery** — any drop from the gallery. New drops get a *New* badge for 30 days.
+- **Plain**: the normal chat.
+- **Daily inspiration**: a different gallery picture every day.
+- **Your own**: upload any photo. It is downscaled and kept on your machine.
+- **Gallery**: any drop from the gallery. New drops get a *New* badge for 30 days.
 
 **Picture strength** switches between *Soft* (text stays very readable) and *Vivid*.
 Your colours, fonts and light/dark mode are left alone, because the picture sits
@@ -35,7 +35,7 @@ then turn it on. Plugins are on by default; switch one off in the same page.
 ### By hand
 
 The runtime only loads `<plugin-root>/<name>/plugin.js`. This repo keeps its
-entry point in `desktop/plugin.js`, so a plain clone is **not** enough — copy
+entry point in `desktop/plugin.js`, so a plain clone is **not** enough: copy
 that file to the folder root as well:
 
 ```bash
@@ -45,7 +45,7 @@ cp ~/.hermes/desktop-plugins/backdrops/desktop/plugin.js \
 ```
 
 Skipping the `cp` leaves the plugin invisible: it is not listed and produces no
-error. (Install-from-Git does this copy for you — it is only the manual path
+error. (Install-from-Git does this copy for you; it is only the manual path
 that needs it.)
 
 The plugin fetches its pictures from `backdrops.json` over HTTPS, so a manual
