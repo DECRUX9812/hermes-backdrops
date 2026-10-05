@@ -419,7 +419,7 @@ const refresh = async ctx => {
 export default {
   id: 'backdrops',
   name: 'Backdrops',
-  description: 'A picture behind your chat — plain, a daily pick, the gallery, or your own photo — without changing your theme.',
+  description: 'A picture behind your chat: plain, a daily pick, the gallery, or your own photo: without changing your theme.',
   register(ctx) {
     const base = ctx.storage.get('manifestUrl', MANIFEST_URL)
     const stored = ctx.storage.get('choice', 'plain')
