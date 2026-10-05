@@ -30,11 +30,27 @@ Hermes Desktop → **Capabilities → Plugins → Install from Git**, paste
 https://github.com/DECRUX9812/hermes-backdrops
 ```
 
-then turn it on. Or by hand:
+then turn it on. Plugins are on by default; switch one off in the same page.
+
+### By hand
+
+The runtime only loads `<plugin-root>/<name>/plugin.js`. This repo keeps its
+entry point in `desktop/plugin.js`, so a plain clone is **not** enough — copy
+that file to the folder root as well:
 
 ```bash
 git clone https://github.com/DECRUX9812/hermes-backdrops ~/.hermes/desktop-plugins/backdrops
+cp ~/.hermes/desktop-plugins/backdrops/desktop/plugin.js \
+   ~/.hermes/desktop-plugins/backdrops/plugin.js
 ```
+
+Skipping the `cp` leaves the plugin invisible: it is not listed and produces no
+error. (Install-from-Git does this copy for you — it is only the manual path
+that needs it.)
+
+The plugin fetches its pictures from `backdrops.json` over HTTPS, so a manual
+install only needs `plugin.js`. The `backgrounds/` folder is the bundled
+fallback and the docs are for the website; neither is required to run.
 
 ## New pictures without updates
 
